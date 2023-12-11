@@ -1,0 +1,17 @@
+<img
+  src="assets/loader.svg"
+  width="35"
+  height="35"
+  *ngIf="!hasLoaded"
+  class="card-img-top mt-3"
+>
+
+<img
+  [src]="url"
+  [alt]="alt"
+  class="card-img-top animate__animated animate__fadeIn"
+  (load)="imageLoaded()"
+  [ngStyle]="{
+    display: hasLoaded ? '' : 'none'
+  }"
+>
